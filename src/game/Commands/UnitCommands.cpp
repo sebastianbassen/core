@@ -522,6 +522,11 @@ bool ChatHandler::HandleNameAuraCommand(char* args)
 
 bool ChatHandler::HandleAuraHelper(uint32 spellId, int32 duration, Unit* unit)
 {
+
+    if(!unit->isPlayer()) {
+        return false;
+    }
+
     SpellEntry const* spellInfo = sSpellMgr.GetSpellEntry(spellId);
     if (!spellInfo)
         return false;
