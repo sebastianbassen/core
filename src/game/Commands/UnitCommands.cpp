@@ -523,7 +523,7 @@ bool ChatHandler::HandleNameAuraCommand(char* args)
 bool ChatHandler::HandleAuraHelper(uint32 spellId, int32 duration, Unit* unit)
 {
 
-    if(!unit->isPlayer()) {
+    if(!unit->IsPlayer()) {
         return false;
     }
 
