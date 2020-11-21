@@ -2733,7 +2733,7 @@ bool ChatHandler::HandleLearnAllCraftsCommand(char* /*args*/)
     return true;
 }
 
-bool ChatHandler::HandleSetUpCharacter(char* args)
+bool ChatHandler::HandleSetupCharacter(char* args)
 {
 
     Player* player = m_session->GetPlayer();
