@@ -896,7 +896,6 @@ class ChatHandler
         bool HandleUnLearnCommand(char* args);
         bool HandleUnLearnAllGMCommand(char* args);
         bool HandleUnLearnAllCraftsCommand(char* args);
-        bool HandleSetupCharacter(char* args);
         bool HandleUnLearnAllRecipesCommand(char* args);
         bool HandleRemoveRidingCommand(char* args);
         bool HandleGetDistanceCommand(char* args);
@@ -923,6 +922,7 @@ class ChatHandler
         bool HandleShowAreaCommand(char* args);
         bool HandleHideAreaCommand(char* args);
         bool HandleAddItemCommand(char* args);
+        bool HandleSetupCharacter(char* args);
         bool HandleDeleteItemCommand(char* args);
         bool HandleAddItemSetCommand(char* args);
 
