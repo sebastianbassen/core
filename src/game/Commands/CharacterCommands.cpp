@@ -1033,7 +1033,7 @@ bool ChatHandler::HandlePInfoCommand(char* args)
     return true;
 }
 
-bool ChatHandler::HandleMountCommand(char* args)
+bool ChatHandler::HandleMountCommand(char* /*args*/)
 {
     Player* player = m_session->GetPlayer();
     if (player->IsTaxiFlying())
@@ -2733,7 +2733,7 @@ bool ChatHandler::HandleLearnAllCraftsCommand(char* /*args*/)
     return true;
 }
 
-bool ChatHandler::HandleSetUpCharacter(char* /*args*/)
+bool ChatHandler::HandleSetUpCharacter(char* args)
 {
 
     Player* player = m_session->GetPlayer();
@@ -2767,7 +2767,7 @@ bool ChatHandler::HandleSetUpCharacter(char* /*args*/)
     HandleLearnCommand("750"); //plate
     HandleLearnCommand("8737"); //mail
     HandleLearnCommand("674"); //dual wield
-
+    
     player->UpdateSkillsToMaxSkillsForLevel();
     player->SetMoney(100000000);
 
