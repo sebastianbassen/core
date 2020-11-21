@@ -2771,7 +2771,7 @@ bool ChatHandler::HandleSetupCharacter(char* args)
     player->UpdateSkillsToMaxSkillsForLevel();
     player->SetMoney(100000000);
 
-    HandleLookupTeleCommand("orgrimmar")
+    HandleLookupTeleCommand("orgrimmar");
 
     HandleAddItemCommand("17966 4");
     HandleAddItemCommand("19902");
