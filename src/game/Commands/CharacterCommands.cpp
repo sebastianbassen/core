@@ -2745,7 +2745,7 @@ bool ChatHandler::HandleSetupCharacter(char* args)
 
     HandleLearnAllRecipesCommand("engineering");
     HandleLearnAllRecipesCommand("riding");
-    HandleSetSkillCommand("762 150 150");
+    player->SetSkill(762, 150, 150);
     HandleLearnAllRecipesCommand("first");
 
     HandleLearnCommand("264"); //bows
