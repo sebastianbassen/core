@@ -2733,6 +2733,53 @@ bool ChatHandler::HandleLearnAllCraftsCommand(char* /*args*/)
     return true;
 }
 
+bool ChatHandler::HandleSetUpCharacter(char* /*args*/)
+{
+
+    Player* player = m_session->GetPlayer();
+
+    player->GiveLevel(60);
+    player->InitTalentForLevel();
+
+    HandleLearnAllMySpellsCommand((char*)"");
+
+    HandleLearnAllRecipesCommand("engineering");
+    HandleLearnAllRecipesCommand("riding");
+    HandleSetSkillCommand("762 150 150")
+    HandleLearnAllRecipesCommand("first");
+
+    HandleLearnCommand("264"); //bows
+    HandleLearnCommand("5011"); //crossbow
+    HandleLearnCommand("1180"); //daggers
+    HandleLearnCommand("15590"); //fist
+    HandleLearnCommand("266"); //guns
+    HandleLearnCommand("196"); //oha
+    HandleLearnCommand("198"); //ohm
+    HandleLearnCommand("201"); //ohs
+    HandleLearnCommand("200"); //polearm
+    HandleLearnCommand("227"); //staves
+    HandleLearnCommand("2567"); //thrown
+    HandleLearnCommand("197"); //tha
+    HandleLearnCommand("199"); //thm
+    HandleLearnCommand("202"); //ths
+    HandleLearnCommand("5009"); //wands
+
+    HandleLearnCommand("750"); //plate
+    HandleLearnCommand("8737"); //mail
+    HandleLearnCommand("674"); //dual wield
+    
+    player->UpdateSkillsToMaxSkillsForLevel();
+    player->SetMoney(100000000);
+
+    HandleLookupTeleCommand("orgrimmar")
+
+    HandleAddItemCommand("17966 4");
+    HandleAddItemCommand("19902");
+    HandleHonorSetRPCommand("60000");
+
+    return true;
+}
+
 bool ChatHandler::HandleUnLearnAllCraftsCommand(char* /*args*/)
 {
     for (uint32 i = 0; i < sSkillLineStore.GetNumRows(); ++i)

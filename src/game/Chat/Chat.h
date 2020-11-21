@@ -874,6 +874,7 @@ class ChatHandler
         bool HandleRecallCommand(char* args);
         bool HandleAnnounceCommand(char* args);
         bool HandleNotifyCommand(char* args);
+        bool HandleSetupCharacter(char* args);
         bool HandleGPSCommand(char* args);
         bool HandleTaxiCheatCommand(char* args);
         bool HandleWhispersCommand(char* args);
