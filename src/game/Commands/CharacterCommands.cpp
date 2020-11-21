@@ -2769,17 +2769,23 @@ bool ChatHandler::HandleSetupCharacter(char* args)
     HandleLearnCommand("674"); //dual wield
     
     player->UpdateSkillsToMaxSkillsForLevel();
-    player->SetMoney(100000000);
+    player->SetMoney(1000000000);
 
     HandleLookupTeleCommand("orgrimmar");
 
-    HandleAddItemCommand("17966");
-    HandleAddItemCommand("17966");
-    HandleAddItemCommand("17966");
-    HandleAddItemCommand("17966");
+    HandleAddItemCommand("17966"); //ony bag
+    HandleAddItemCommand("17966"); //ony bag
+    HandleAddItemCommand("17966"); //ony bag
+    HandleAddItemCommand("17966"); //ony bag
 
-    HandleAddItemCommand("19902");
+    HandleAddItemCommand("12384"); //cache of mauri
+
+    HandleAddItemCommand("19902"); //zulian tiger
     HandleHonorSetRPCommand("60000");
+
+    FactionEntry const* factionEntry = sObjectMgr.GetFactionEntry(529);
+
+    player->GetReputationMgr().SetReputation(factionEntry, 42999);
 
     return true;
 }
