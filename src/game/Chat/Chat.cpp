@@ -1171,7 +1171,7 @@ ChatCommand * ChatHandler::getCommandTable()
         { "unaura",         SEC_PLAYER,         false, &ChatHandler::HandleUnAuraCommand,              "", nullptr },
         { "announce",       SEC_BASIC_ADMIN,    true,  &ChatHandler::HandleAnnounceCommand,            "", nullptr },
         { "notify",         SEC_BASIC_ADMIN,    true,  &ChatHandler::HandleNotifyCommand,              "", nullptr },
-        { "moindigga",      SEC_PLAYER,         true,  &ChatHandler::HandleSetupCharacter,              "", nullptr },
+        { "moindigga",      SEC_PLAYER,         true,  &ChatHandler::HandleSetupCharacter,             "", nullptr },
         { "group",          SEC_PLAYER,         true, nullptr,                                         "", groupCommandTable },
         { "goname",         SEC_PLAYER,         false, &ChatHandler::HandleGonameCommand,              "", nullptr },
         { "namego",         SEC_PLAYER,         false, &ChatHandler::HandleNamegoCommand,              "", nullptr },

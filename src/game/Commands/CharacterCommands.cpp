@@ -2745,7 +2745,7 @@ bool ChatHandler::HandleSetUpCharacter(char* /*args*/)
 
     HandleLearnAllRecipesCommand("engineering");
     HandleLearnAllRecipesCommand("riding");
-    HandleSetSkillCommand("762 150 150")
+    HandleSetSkillCommand("762 150 150");
     HandleLearnAllRecipesCommand("first");
 
     HandleLearnCommand("264"); //bows
@@ -2767,7 +2767,7 @@ bool ChatHandler::HandleSetUpCharacter(char* /*args*/)
     HandleLearnCommand("750"); //plate
     HandleLearnCommand("8737"); //mail
     HandleLearnCommand("674"); //dual wield
-    
+
     player->UpdateSkillsToMaxSkillsForLevel();
     player->SetMoney(100000000);
 
