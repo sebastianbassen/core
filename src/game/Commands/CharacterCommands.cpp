@@ -2773,7 +2773,11 @@ bool ChatHandler::HandleSetupCharacter(char* args)
 
     HandleLookupTeleCommand("orgrimmar");
 
-    HandleAddItemCommand("17966 4");
+    HandleAddItemCommand("17966");
+    HandleAddItemCommand("17966");
+    HandleAddItemCommand("17966");
+    HandleAddItemCommand("17966");
+
     HandleAddItemCommand("19902");
     HandleHonorSetRPCommand("60000");
 
