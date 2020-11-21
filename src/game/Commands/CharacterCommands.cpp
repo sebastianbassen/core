@@ -1033,7 +1033,7 @@ bool ChatHandler::HandlePInfoCommand(char* args)
     return true;
 }
 
-bool ChatHandler::HandleMountCommand(char* /*args*/)
+bool ChatHandler::HandleMountCommand(char* args)
 {
     Player* player = m_session->GetPlayer();
     if (player->IsTaxiFlying())
