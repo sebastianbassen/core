@@ -2745,10 +2745,10 @@ bool ChatHandler::HandleSetupCharacter(char* args)
 
     HandleLearnAllRecipesCommand("engineering");
     HandleLearnAllRecipesCommand("riding");
-    player->SetSkill(762, 150, 150);
     HandleLearnAllRecipesCommand("first");
     HandleLearnAllRecipesCommand("enchanting");
 
+    HandleLearnCommand("33391"); //proper riding
     HandleLearnCommand("264"); //bows
     HandleLearnCommand("5011"); //crossbow
     HandleLearnCommand("1180"); //daggers
@@ -2787,6 +2787,14 @@ bool ChatHandler::HandleSetupCharacter(char* args)
     FactionEntry const* factionEntry = sObjectMgr.GetFactionEntry(529);
 
     player->GetReputationMgr().SetReputation(factionEntry, 42999);
+
+    FactionEntry const* factionEntry2 = sObjectMgr.GetFactionEntry(270);
+
+    player->GetReputationMgr().SetReputation(factionEntry2, 42999);
+
+    FactionEntry const* factionEntry3 = sObjectMgr.GetFactionEntry(910);
+
+    player->GetReputationMgr().SetReputation(factionEntry3, 42999);
 
     return true;
 }
