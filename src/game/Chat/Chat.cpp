@@ -258,9 +258,9 @@ ChatCommand * ChatHandler::getCommandTable()
 
     static ChatCommand cooldownCommandTable[] =
     {
-        { "list",            SEC_GAMEMASTER,    false, &ChatHandler::HandleCooldownListCommand,             "", nullptr },
-        { "clear",           SEC_GAMEMASTER,    false, &ChatHandler::HandleCooldownClearCommand,            "", nullptr },
-        { "clearclientside", SEC_GAMEMASTER,    false, &ChatHandler::HandleCooldownClearClientSideCommand,  "", nullptr },
+        { "list",            SEC_PLAYER,    false, &ChatHandler::HandleCooldownListCommand,             "", nullptr },
+        { "clear",           SEC_PLAYER,    false, &ChatHandler::HandleCooldownClearCommand,            "", nullptr },
+        { "clearclientside", SEC_PLAYER,    false, &ChatHandler::HandleCooldownClearClientSideCommand,  "", nullptr },
         { nullptr,             0,               false, nullptr,                                             "", nullptr }
     };
 
